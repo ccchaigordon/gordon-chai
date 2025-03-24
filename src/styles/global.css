@@ -1,0 +1,8 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+html,
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}

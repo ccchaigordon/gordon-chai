@@ -1,0 +1,142 @@
+---
+
+---
+
+<nav
+  class="sticky bg-base-200 sm:m-0 flex items-start sm:items-center w-min sm:w-full min-h-[60px] h-full sm:h-auto sm:justify-center rounded-r-2xl sm:rounded-none"
+>
+  <button
+    id="menuBtn"
+    class="absolute sm:hidden mx-8 mt-8 mb-2 outline-none cursor-pointer"
+    aria-label="Open Menu"
+    aria-expanded="false"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      class="h-6 w-6"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M4 6h16M4 12h16m-7 6h7"></path>
+    </svg>
+  </button>
+  <div
+    id="menu"
+    class="m-6 sm:m-0 sm:mx-auto w-auto sm:w-[90%] flex flex-col sm:flex-row sm:justify-between sm:items-center"
+  >
+    <!-- Hamburger Icon -->
+
+    <a href="/" class="flex flex-row items-center mx-2 mt-14 mb-4 sm:my-0"
+      ><img src="/src/assets/logo_white.svg" class="h-6 sm:h-8 w-auto mr-4" /><p
+        class="text-sm sm:hidden"
+      >
+        Gordon Chai
+      </p></a
+    >
+    <hr class="sm:hidden ml-2 mt-2 mb-4" />
+    <ul class="menu p-0 sm:menu-horizontal rounded-box">
+      <li>
+        <a class="hover:bg-base-700">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-folder"
+            ><path
+              d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"
+            ></path></svg
+          >
+          Projects
+        </a>
+      </li>
+      <li>
+        <a class="hover:bg-base-700">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-file-user"
+            ><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path
+              d="M15 18a3 3 0 1 0-6 0"></path><path
+              d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z"
+            ></path><circle cx="12" cy="13" r="2"></circle></svg
+          >
+          Resume
+          <span class="badge badge-xs badge-primary">PDF</span>
+        </a>
+      </li>
+      <li>
+        <a class="hover:bg-base-700"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-user"
+            ><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle
+              cx="12"
+              cy="7"
+              r="4"></circle></svg
+          > Contact
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const menuBtn = document.getElementById("menuBtn");
+    const menu = document.getElementById("menu");
+
+    // Toggle menu visibility
+    function adjustMenuVisibility() {
+      if (!menu) return;
+
+      if (window.innerWidth >= 640) {
+        menu.classList.remove("hidden");
+        menu.classList.remove("p-0");
+        if (menuBtn) menuBtn.setAttribute("aria-expanded", "true");
+      } else {
+        menu.classList.add("hidden");
+        menu.classList.add("p-0");
+        if (menuBtn) menuBtn.setAttribute("aria-expanded", "false");
+      }
+    }
+
+    if (menuBtn && menu) {
+      menuBtn.addEventListener("click", () => {
+        if (!menu) return;
+
+        const isMenuHidden = menu.classList.toggle("hidden");
+        menuBtn.setAttribute("aria-expanded", String(!isMenuHidden));
+      });
+
+      window.addEventListener("resize", adjustMenuVisibility);
+
+      adjustMenuVisibility();
+    }
+  });
+</script>
