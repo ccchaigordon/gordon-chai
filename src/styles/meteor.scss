@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 $n: 5;
 $s: 100;
 
@@ -9,8 +11,8 @@ html,body {
 $shadow: ();
 
 @for $i from 1 through $s {
-  $x: random(1920);
-  $y: random(1000);
+  $x: math.random(1920);
+  $y: math.random(1000);
   $shadow: $shadow, ( $x+px $y+px #fff) !global;
 }
 
@@ -22,9 +24,9 @@ $shadow: ();
 }
 
 @for $i from 1 through $n {
-  $v: random(90) + 9;
-  $h: random(250) + 50;
-  $d: random(70)/10 + 3;
+  $v: calc(math.random(90) + 9);
+  $h: calc(math.random(250) + 50);
+  $d: calc(math.random(70)/10 + 3);
   .meteor-#{$i} {
     position: absolute;
     top: $h + px;
