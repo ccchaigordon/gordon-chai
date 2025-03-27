@@ -1,5 +1,6 @@
 ---
 import NavBar from "../components/NavBar.astro";
+import Meteor from "../components/Meteor.astro";
 ---
 
 <!doctype html>
@@ -13,6 +14,7 @@ import NavBar from "../components/NavBar.astro";
   </head>
   <body>
     <NavBar />
+    <Meteor />
     <slot />
   </body>
 </html>
@@ -21,7 +23,7 @@ import NavBar from "../components/NavBar.astro";
   html,
   body {
     margin: 0;
-    width: 100%;
     height: 100%;
+    background-image: radial-gradient(ellipse at top, #080e21 0%, #1b2735 95%);
   }
 </style>
