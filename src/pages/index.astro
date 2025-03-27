@@ -7,6 +7,99 @@ import NavBar from "../components/NavBar.astro";
 <Layout>
   <NavBar />
   <div class="label flex w-full mt-24">
-    <div class="text-wrapper mx-auto w-[80%]">Hi, I'm Gordon Chai</div>
+    <div
+      class="mx-auto w-[85%] flex flex-col lg:flex-row justify-center lg:justify-between"
+    >
+      <div class="lg:min-h-80 flex flex-col gap-4 justify-end">
+        <div
+          class="text-wrapper mx-auto lg:mx-0 text-2xl xs:text-4xl sm:text-[3rem] xl:text-[4rem]"
+        >
+          Hi, I'm Gordon Chai
+        </div>
+        <div
+          class="mx-auto lg:mx-0 text-[12px] xs:text-lg xl:text-xl tracking-wide"
+        >
+          Web Developer · UI/UX Designer · Creative Director
+        </div>
+      </div>
+
+      <!-- Floating icons -->
+      <div
+        class="flex mt-12 xs:mt-20 lg:mt-0 mr-4 w-full justify-center lg:justify-end"
+      >
+        <img
+          src="/src/assets/intro_pic.png"
+          alt="A programmer writing codes"
+          class="-z-1 absolute h-60 xs:h-80 w-auto rounded-4xl"
+        />
+        <div
+          class="floating1 flex relative -top-4 xs:-top-10 -left-4 xs:-left-10 lg:left-0 h-24 w-24 xs:h-32 xs:w-32 bg-base-100 rounded-full items-center justify-center"
+        >
+          <div
+            class="flex w-16 h-16 xs:w-25 xs:h-25 rounded-full bg-indigo-900 items-center justify-center shadow-cyan-400 shadow-[0px_0px_15px_3px]"
+          >
+            <img
+              src="/src/assets/astro_icon.svg"
+              alt="Astro"
+              class="h-8 w-8 xs:h-15 xs:w-15"
+            />
+          </div>
+        </div>
+        <div
+          class="floating2 flex relative top-50 xs:top-70 left-6 xs:left-20 h-24 w-24 xs:h-36 xs:w-36 bg-base-100 rounded-full items-center justify-center"
+        >
+          <div
+            class="flex w-18 h-18 xs:w-28 xs:h-28 rounded-full bg-indigo-900 items-center justify-center shadow-indigo-400 shadow-[0px_0px_15px_3px]"
+          >
+            <img
+              src="/src/assets/react_icon.svg"
+              alt="React"
+              class="h-12 w-12 xs:h-20 xs:w-20"
+            />
+          </div>
+        </div>
+        <div
+          class="floating3 flex relative top-10 left-2 xs:left-12 lg:left-20 h-24 w-24 xs:h-32 xs:w-32 bg-base-100 rounded-full items-center justify-center"
+        >
+          <div
+            class="flex w-18 h-18 xs:w-25 xs:h-25 rounded-full bg-indigo-900 items-center justify-center shadow-sky-400 shadow-[0px_0px_15px_3px]"
+          >
+            <img
+              src="/src/assets/tailwind_icon.svg"
+              alt="Tailwind CSS"
+              class="h-12 w-12"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </Layout>
+
+<style>
+  .floating1 {
+    animation: float 5s ease-in-out infinite;
+  }
+
+  .floating2 {
+    animation: float 4s ease-in-out infinite;
+  }
+
+  .floating3 {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+</style>
