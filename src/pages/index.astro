@@ -4,7 +4,10 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <div class="label flex flex-col w-full pt-16 lg:pt-24">
+  <!-- Screen 1 -->
+  <div
+    class="label flex flex-col w-full min-h-[calc(100vh-4rem)] lg:min-h-[calc(100vh-9rem)] xl:min-h-[calc(100vh-10rem)] pt-16 lg:pt-36 xl:pt-40"
+  >
     <!-- Section 1 -->
     <div
       class="mx-auto w-[85%] flex flex-col lg:flex-row justify-center lg:justify-between"
@@ -138,10 +141,15 @@ import Layout from "../layouts/Layout.astro";
         <img
           src="https://skillicons.dev/icons?i=mysql&perline=10"
           alt="Skills and Tech Stacks"
-          class="h-10"
+          class="h-[8vw] xs:h-10"
         />
       </div>
     </div>
+  </div>
+
+  <!-- Screen 2 -->
+  <div class="label flex flex-col w-full min-h-screen">
+    <h2>Featured Projects</h2>
   </div>
 </Layout>
 
