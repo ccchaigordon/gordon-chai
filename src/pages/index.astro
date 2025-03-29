@@ -1,151 +1,180 @@
 ---
 import "../styles/global.css";
 import Layout from "../layouts/Layout.astro";
+import Projects from "../components/Projects.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout>
-  <div class="label flex flex-col w-full mt-16 lg:mt-24">
-    <!-- Section 1 -->
+  <div class="w-screen h-auto flex flex-col">
+    <!-- Screen 1 -->
+    <div class="label flex flex-col w-full">
+      <!-- Section 1 -->
+      <div
+        class="mx-auto w-[85%] flex flex-col lg:flex-row justify-center lg:justify-between pt-16 md:pt-24 lg:pt-36 2xl:pt-52"
+      >
+        <div class="lg:min-h-80 flex flex-col gap-4 justify-end">
+          <!-- Links -->
+          <div class="flex flex-col gap-4 justify-center">
+            <div
+              class="flex mt-4 space-x-1 justify-center lg:justify-start lg:mt-0"
+            >
+              <a
+                href="https://www.linkedin.com/in/gordon-chai"
+                target="_blank"
+                class="w-10 h-10 rounded-full flex justify-center items-center hover:bg-gray-700"
+              >
+                <svg
+                  class="w-[1.25rem] h-[1.25rem] text-white"
+                  viewBox="0 0 13 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2.8794 11.5527V3.86835H0.318893V11.5527H2.87967H2.8794ZM1.59968 2.81936C2.4924 2.81936 3.04817 2.2293 3.04817 1.49188C3.03146 0.737661 2.4924 0.164062 1.61666 0.164062C0.74032 0.164062 0.167969 0.737661 0.167969 1.49181C0.167969 2.22923 0.723543 2.8193 1.5829 2.8193H1.59948L1.59968 2.81936ZM4.29668 11.5527H6.85698V7.26187C6.85698 7.03251 6.87369 6.80255 6.94134 6.63873C7.12635 6.17968 7.54764 5.70449 8.25514 5.70449C9.18141 5.70449 9.55217 6.4091 9.55217 7.44222V11.5527H12.1124V7.14672C12.1124 4.78652 10.8494 3.68819 9.16483 3.68819C7.78372 3.68819 7.17715 4.45822 6.84014 4.98267H6.85718V3.86862H4.29681C4.33023 4.5895 4.29661 11.553 4.29661 11.553L4.29668 11.5527Z"
+                    fill="currentColor"></path>
+                </svg>
+              </a>
+              <a
+                href="https://github.com/ccchaigordon"
+                target="_blank"
+                class="w-10 h-10 rounded-full flex justify-center items-center hover:bg-gray-700"
+              >
+                <svg
+                  class="w-[1.25rem] h-[1.25rem] text-white"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 496 512"
+                >
+                  <path
+                    d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+                  ></path></svg
+                >
+              </a>
+            </div>
+          </div>
+
+          <!-- Intro Text -->
+          <div
+            class="text-wrapper mx-auto lg:mx-0 text-2xl xs:text-4xl sm:text-[3rem] xl:text-[4rem]"
+          >
+            Hi, I'm Gordon Chai
+          </div>
+          <div
+            class="mx-auto lg:mx-0 text-[12px] xs:text-lg xl:text-xl tracking-wide"
+          >
+            Web Developer · UI/UX Designer · Creative Director
+          </div>
+        </div>
+
+        <!-- Floating icons -->
+        <div
+          class="relative flex mt-12 xs:mt-20 lg:mt-0 mr-4 2xl:mr-16 w-full justify-center lg:justify-end"
+        >
+          <img
+            src="/src/assets/intro_pic.png"
+            alt="A programmer writing codes"
+            class="image-float z-1 absolute h-60 xs:h-80 w-auto rounded-4xl"
+          />
+          <div
+            class="floating1 z-2 flex relative -top-4 xs:-top-10 -left-4 xs:-left-10 lg:left-0 h-24 w-24 xs:h-32 xs:w-32 bg-base-100 rounded-full items-center justify-center"
+          >
+            <div
+              class="flex w-16 h-16 xs:w-25 xs:h-25 rounded-full bg-indigo-900 items-center justify-center shadow-cyan-400 shadow-[0px_0px_15px_3px]"
+            >
+              <img
+                src="/src/assets/astro_icon.svg"
+                alt="Astro"
+                class="h-8 w-8 xs:h-15 xs:w-15"
+              />
+            </div>
+          </div>
+          <div
+            class="floating2 z-2 flex relative top-50 xs:top-70 left-6 xs:left-20 h-24 w-24 xs:h-36 xs:w-36 bg-base-100 rounded-full items-center justify-center"
+          >
+            <div
+              class="flex w-18 h-18 xs:w-28 xs:h-28 rounded-full bg-indigo-900 items-center justify-center shadow-indigo-400 shadow-[0px_0px_15px_3px]"
+            >
+              <img
+                src="/src/assets/react_icon.svg"
+                alt="React"
+                class="h-12 w-12 xs:h-20 xs:w-20"
+              />
+            </div>
+          </div>
+          <div
+            class="floating3 z-2 flex relative top-10 left-2 xs:left-12 lg:left-20 h-24 w-24 xs:h-32 xs:w-32 bg-base-100 rounded-full items-center justify-center"
+          >
+            <div
+              class="flex w-18 h-18 xs:w-25 xs:h-25 rounded-full bg-indigo-900 items-center justify-center shadow-sky-400 shadow-[0px_0px_15px_3px]"
+            >
+              <img
+                src="/src/assets/tailwind_icon.svg"
+                alt="Tailwind CSS"
+                class="h-12 w-12"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 2 -->
+      <div class="flex flex-col flex-grow w-[85%] mt-[60vw] xs:mt-80 lg:mt-10">
+        <h2
+          class="text-center lg:text-left font-semibold text-lg text-blue-200"
+        >
+          Tech Stacks & Skills
+        </h2>
+        <hr
+          class="w-[5vw] h-[2px] mx-auto lg:mx-0 lg:text-center mt-3 mb-5 border-none bg-gray-400"
+        />
+        <div
+          class="flex flex-col mx-auto lg:mx-0 justify-center lg:justify-start items-center lg:items-start gap-1 xs:gap-4"
+        >
+          <img
+            src="https://skillicons.dev/icons?i=react,astro,html,css,git,github,c,cpp,py,vue&perline=10"
+            alt="Skills and Tech Stacks"
+            class="h-10"
+          />
+          <img
+            src="https://skillicons.dev/icons?i=discordjs,figma,java,js,ts,tailwind,anaconda,nodejs,firebase,supabase&perline=10"
+            alt="Skills and Tech Stacks"
+            class="h-10"
+          />
+          <img
+            src="https://skillicons.dev/icons?i=mysql&perline=10"
+            alt="Skills and Tech Stacks"
+            class="h-[8vw] xs:h-10"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Screen 2 -->
     <div
-      class="mx-auto w-[85%] flex flex-col lg:flex-row justify-center lg:justify-between"
+      class="label flex flex-col w-[85%] mx-auto mt-[10vw] xs:mt-20 2xl:mt-50 mb-20"
     >
-      <div class="lg:min-h-80 flex flex-col gap-4 justify-end">
-        <!-- Links -->
-        <div class="flex flex-col gap-4 justify-center">
-          <div
-            class="flex mt-4 space-x-1 justify-center lg:justify-start lg:mt-0"
-          >
-            <a
-              href="https://www.linkedin.com/in/gordon-chai"
-              target="_blank"
-              class="w-10 h-10 rounded-full flex justify-center items-center hover:bg-gray-700"
-            >
-              <svg
-                class="w-[1.25rem] h-[1.25rem] text-white"
-                viewBox="0 0 13 12"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M2.8794 11.5527V3.86835H0.318893V11.5527H2.87967H2.8794ZM1.59968 2.81936C2.4924 2.81936 3.04817 2.2293 3.04817 1.49188C3.03146 0.737661 2.4924 0.164062 1.61666 0.164062C0.74032 0.164062 0.167969 0.737661 0.167969 1.49181C0.167969 2.22923 0.723543 2.8193 1.5829 2.8193H1.59948L1.59968 2.81936ZM4.29668 11.5527H6.85698V7.26187C6.85698 7.03251 6.87369 6.80255 6.94134 6.63873C7.12635 6.17968 7.54764 5.70449 8.25514 5.70449C9.18141 5.70449 9.55217 6.4091 9.55217 7.44222V11.5527H12.1124V7.14672C12.1124 4.78652 10.8494 3.68819 9.16483 3.68819C7.78372 3.68819 7.17715 4.45822 6.84014 4.98267H6.85718V3.86862H4.29681C4.33023 4.5895 4.29661 11.553 4.29661 11.553L4.29668 11.5527Z"
-                  fill="currentColor"></path>
-              </svg>
-            </a>
-            <a
-              href="https://github.com/ccchaigordon"
-              target="_blank"
-              class="w-10 h-10 rounded-full flex justify-center items-center hover:bg-gray-700"
-            >
-              <svg
-                class="w-[1.25rem] h-[1.25rem] text-white"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                viewBox="0 0 496 512"
-              >
-                <path
-                  d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
-                ></path></svg
-              >
-            </a>
-          </div>
-        </div>
-
-        <!-- Intro Text -->
-        <div
-          class="text-wrapper mx-auto lg:mx-0 text-2xl xs:text-4xl sm:text-[3rem] xl:text-[4rem]"
+      <div class="flex flex-col w-full h-auto mt-4 justify-center items-end">
+        <h2
+          class="text-center mx-auto lg:mx-0 lg:text-right self-end font-semibold text-lg text-blue-200"
         >
-          Hi, I'm Gordon Chai
-        </div>
-        <div
-          class="mx-auto lg:mx-0 text-[12px] xs:text-lg xl:text-xl tracking-wide"
-        >
-          Web Developer · UI/UX Designer · Creative Director
-        </div>
-      </div>
-
-      <!-- Floating icons -->
-      <div
-        class="relative flex mt-12 xs:mt-20 lg:mt-0 mr-4 2xl:mr-16 w-full justify-center lg:justify-end"
-      >
-        <img
-          src="/src/assets/intro_pic.png"
-          alt="A programmer writing codes"
-          class="image-float z-1 absolute h-60 xs:h-80 w-auto rounded-4xl"
+          Featured Projects
+        </h2>
+        <hr
+          class="w-[5vw] h-[2px] mx-auto lg:mx-0 lg:text-center mt-3 mb-5 border-none bg-gray-400"
         />
-        <div
-          class="floating1 z-2 flex relative -top-4 xs:-top-10 -left-4 xs:-left-10 lg:left-0 h-24 w-24 xs:h-32 xs:w-32 bg-base-100 rounded-full items-center justify-center"
-        >
-          <div
-            class="flex w-16 h-16 xs:w-25 xs:h-25 rounded-full bg-indigo-900 items-center justify-center shadow-cyan-400 shadow-[0px_0px_15px_3px]"
-          >
-            <img
-              src="/src/assets/astro_icon.svg"
-              alt="Astro"
-              class="h-8 w-8 xs:h-15 xs:w-15"
-            />
-          </div>
-        </div>
-        <div
-          class="floating2 z-2 flex relative top-50 xs:top-70 left-6 xs:left-20 h-24 w-24 xs:h-36 xs:w-36 bg-base-100 rounded-full items-center justify-center"
-        >
-          <div
-            class="flex w-18 h-18 xs:w-28 xs:h-28 rounded-full bg-indigo-900 items-center justify-center shadow-indigo-400 shadow-[0px_0px_15px_3px]"
-          >
-            <img
-              src="/src/assets/react_icon.svg"
-              alt="React"
-              class="h-12 w-12 xs:h-20 xs:w-20"
-            />
-          </div>
-        </div>
-        <div
-          class="floating3 z-2 flex relative top-10 left-2 xs:left-12 lg:left-20 h-24 w-24 xs:h-32 xs:w-32 bg-base-100 rounded-full items-center justify-center"
-        >
-          <div
-            class="flex w-18 h-18 xs:w-25 xs:h-25 rounded-full bg-indigo-900 items-center justify-center shadow-sky-400 shadow-[0px_0px_15px_3px]"
-          >
-            <img
-              src="/src/assets/tailwind_icon.svg"
-              alt="Tailwind CSS"
-              class="h-12 w-12"
-            />
-          </div>
-        </div>
       </div>
+
+      <!-- Cards -->
+      <Projects />
     </div>
 
-    <!-- Section 2 -->
-    <div class="flex flex-col w-[85%] mt-[28vh] xs:mt-80 lg:mt-10">
-      <h2 class="text-center lg:text-left font-semibold text-lg text-blue-200">
-        Tech Stacks & Skills
-      </h2>
-      <hr
-        class="w-[5vw] h-[3px] mx-auto lg:mx-0 lg:text-center mt-3 mb-5 border-none bg-gray-400"
-      />
-      <div
-        class="flex flex-col mx-auto lg:mx-0 mb-8 justify-center lg:justify-start items-center lg:items-start gap-1 xs:gap-4"
-      >
-        <img
-          src="https://skillicons.dev/icons?i=react,astro,html,css,git,github,c,cpp,py,vue&perline=10"
-          alt="Skills and Tech Stacks"
-          class="h-10"
-        />
-        <img
-          src="https://skillicons.dev/icons?i=discordjs,figma,java,js,ts,tailwind,anaconda,nodejs,firebase,supabase&perline=10"
-          alt="Skills and Tech Stacks"
-          class="h-10"
-        />
-        <img
-          src="https://skillicons.dev/icons?i=mysql&perline=10"
-          alt="Skills and Tech Stacks"
-          class="h-10"
-        />
-      </div>
-    </div>
+    <Footer />
   </div>
 </Layout>
 
 <style>
+  /* Floating Icons */
   .image-float {
     animation: float 7s ease-in-out infinite;
   }
