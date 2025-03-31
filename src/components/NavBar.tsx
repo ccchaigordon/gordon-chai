@@ -101,7 +101,7 @@ export default function NavBar() {
           className="flex flex-row items-center mx-2 mt-14 mb-4 sm:my-0 outline-none"
         >
           <img
-            src="/src/assets/logo_white.svg"
+            src="/assets/logo_white.svg"
             className="h-6 sm:h-8 w-auto mr-4"
           />
           <p className="text-sm sm:hidden">Gordon Chai</p>

@@ -2,7 +2,7 @@
     {
       "name": "Better Reviews",
       "link": "https://github.com/ccchaigordon/Better-Reviews",
-      "image": "/src/assets/better_reviews.png",
+      "image": "/assets/better_reviews.png",
       "technologies": ["React", "Astro", "Tailwind CSS"],
       "bgFrom": "purple-500",
       "bgTo": "cyan-500",
@@ -12,7 +12,7 @@
     {
       "name": "Productify",
       "link": "https://github.com/ccchaigordon",
-      "image": "/src/assets/productify.png",
+      "image": "/assets/productify.png",
       "technologies": ["React", "Firebase", "Tailwind CSS"],
       "bgFrom": "blue-500",
       "bgTo": "yellow-500",
@@ -22,7 +22,7 @@
     {
       "name": "Music Emporium",
       "link": "https://github.com/ccchaigordon/CAT201-Project",
-      "image": "/src/assets/music_emporium.png",
+      "image": "/assets/music_emporium.png",
       "technologies": ["React", "Java", "CSS"],
       "bgFrom": "green-500",
       "bgTo": "blue-500",
@@ -32,7 +32,7 @@
     {
       "name": "Trip Essence",
       "link": "https://github.com/ccchaigordon/cat-assignment-2",
-      "image": "/src/assets/trip_essence.png",
+      "image": "/assets/trip_essence.png",
       "technologies": ["React", "Tailwind CSS"],
       "bgFrom": "indigo-500",
       "bgTo": "blue-500",
