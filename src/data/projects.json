@@ -1,0 +1,43 @@
+[
+    {
+      "name": "Better Reviews",
+      "link": "https://github.com/ccchaigordon/Better-Reviews",
+      "image": "/src/assets/better_reviews.png",
+      "technologies": ["React", "Astro", "Tailwind CSS"],
+      "bgFrom": "purple-500",
+      "bgTo": "cyan-500",
+      "shadowColor": "rgba(6,182,212,0.3)",
+      "hoverShadowColor": "rgba(6,182,212,0.3)"
+    },
+    {
+      "name": "Productify",
+      "link": "https://github.com/ccchaigordon",
+      "image": "/src/assets/better_reviews.png",
+      "technologies": ["React", "Firebase", "Tailwind CSS"],
+      "bgFrom": "blue-500",
+      "bgTo": "yellow-500",
+      "shadowColor": "rgba(234,179,8,0.3)",
+      "hoverShadowColor": "rgba(234,179,8,0.3)"
+    },
+    {
+      "name": "Music Emporium",
+      "link": "https://github.com/ccchaigordon/CAT201-Project",
+      "image": "/src/assets/music_emporium.png",
+      "technologies": ["React", "Java", "CSS"],
+      "bgFrom": "green-500",
+      "bgTo": "blue-500",
+      "shadowColor": "rgba(148,85,247,0.3)",
+      "hoverShadowColor": "rgba(148,85,247,0.3)"
+    },
+    {
+      "name": "Trip Essence",
+      "link": "https://github.com/ccchaigordon/cat-assignment-2",
+      "image": "/src/assets/trip_essence.png",
+      "technologies": ["React", "Tailwind CSS"],
+      "bgFrom": "indigo-500",
+      "bgTo": "blue-500",
+      "shadowColor": "rgba(168,85,247,0.3)",
+      "hoverShadowColor": "rgba(168,85,247,0.3)"
+    }
+]
+  
