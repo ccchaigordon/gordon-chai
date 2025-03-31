@@ -1,6 +1,6 @@
 ---
-import NavBar from "../components/NavBar.astro";
 import Meteor from "../components/Meteor.astro";
+import NavBar from "../components/NavBar.tsx";
 ---
 
 <!doctype html>
@@ -13,7 +13,7 @@ import Meteor from "../components/Meteor.astro";
     <title>Gordon Chai</title>
   </head>
   <body>
-    <NavBar />
+    <NavBar client:load />
     <Meteor />
     <slot />
   </body>
