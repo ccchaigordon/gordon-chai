@@ -12,7 +12,7 @@
     {
       "name": "Productify",
       "link": "https://github.com/ccchaigordon",
-      "image": "/src/assets/better_reviews.png",
+      "image": "/src/assets/productify.png",
       "technologies": ["React", "Firebase", "Tailwind CSS"],
       "bgFrom": "blue-500",
       "bgTo": "yellow-500",
