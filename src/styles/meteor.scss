@@ -3,10 +3,6 @@
 $n: 5;
 $s: 100;
 
-html,body {
-  background-image: radial-gradient(ellipse at top , #080e21 0%,  #1b2735 95%);
-}
-
 $shadow: ();
 
 @for $i from 1 through $s {

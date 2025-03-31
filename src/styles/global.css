@@ -12,6 +12,7 @@ body {
     "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  background-image: radial-gradient(ellipse at top, #080e21 0%, #1b2735 95%);
 }
 
 .label .text-wrapper {
