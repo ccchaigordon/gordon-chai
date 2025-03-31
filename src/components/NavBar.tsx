@@ -90,9 +90,10 @@ export default function NavBar() {
       <div
         id="menu"
         className={`
-          m-6 sm:m-0 sm:mx-auto w-auto sm:w-[90%]
+          m-6 -mx-20 sm:m-0 sm:mx-auto w-auto sm:w-[90%]
           flex flex-col sm:flex-row sm:justify-between sm:items-center
-          ${isMenuOpen ? "" : "hidden p-0"} 
+          overflow-hidden transition-all duration-300 ease-in-out
+          ${isMenuOpen ? "max-h-96 mx-6 opacity-100" : "max-h-0 p-0 opacity-0"}
         `}
       >
         <a
