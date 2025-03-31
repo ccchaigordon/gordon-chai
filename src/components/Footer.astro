@@ -8,6 +8,21 @@
   <img
     src="/src/assets/earth.svg"
     alt="Earth"
-    class="max-w-none w-[125%] ml-[-12.5%]"
+    class="max-w-none w-[125%] ml-[-12.5%] opacity-80 slow-spin"
   />
 </div>
+
+<style>
+  @keyframes slow-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .slow-spin {
+    animation: slow-spin 320s linear infinite;
+  }
+</style>
