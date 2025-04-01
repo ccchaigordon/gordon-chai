@@ -36,8 +36,8 @@
       "technologies": ["React", "Tailwind CSS"],
       "bgFrom": "indigo-500",
       "bgTo": "blue-500",
-      "shadowColor": "rgba(168,85,247,0.3)",
-      "hoverShadowColor": "rgba(168,85,247,0.3)"
+      "shadowColor": "rgba(208,95,247,0.3)",
+      "hoverShadowColor": "rgba(208,95,247,0.3)"
     }
 ]
   
