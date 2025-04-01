@@ -1,7 +1,6 @@
 ---
 import Meteor from "../components/Meteor.astro";
 import NavBar from "../components/NavBar.tsx";
-import Footer from "../components/Footer.astro";
 ---
 
 <!doctype html>
@@ -17,7 +16,6 @@ import Footer from "../components/Footer.astro";
     <NavBar client:load />
     <Meteor />
     <slot />
-    <Footer />
   </body>
 </html>
 
