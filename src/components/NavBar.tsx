@@ -75,7 +75,7 @@ export default function NavBar() {
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
-          className="h-6 w-6"
+          className="h-8 w-8"
         >
           <path
             strokeLinecap="round"
