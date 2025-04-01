@@ -56,7 +56,7 @@ export default function NavBar() {
       className="
         z-100 absolute sm:fixed bg-base-200 sm:m-0
         flex items-start sm:items-center w-min sm:w-full
-        min-h-[60px] h-full sm:h-auto sm:justify-center
+        min-h-[60px] h-screen sm:h-auto sm:justify-center
         rounded-r-2xl sm:rounded-none
         bg-[linear-gradient(315deg,#130f40_0%,#000000_74%)]
         opacity-90
