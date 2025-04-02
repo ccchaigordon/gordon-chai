@@ -42,13 +42,44 @@ export default function NavBar() {
   function scrollToFeatured(e: React.MouseEvent<HTMLAnchorElement>) {
     e.preventDefault();
     const target = document.getElementById("featured-projects");
+    const education = document.querySelector(".education-content");
+
+    if (education) {
+      if (education.classList.contains("translate-y-full")) {
+        toggleEducationVisibility();
+      }
+    }
+
     if (target) {
       target.scrollIntoView({ behavior: "smooth" });
+      toggleEducationVisibility();
     }
     if (window.innerWidth < 640) {
       setIsMenuOpen(false);
     }
   }
+
+  // Education
+  const toggleEducationVisibility = () => {
+    const education = document.querySelector(".education-content");
+    if (education) {
+      education.classList.toggle("translate-y-full");
+      education.classList.toggle("opacity-0");
+      education.classList.toggle("invisible");
+
+      if (window.innerWidth < 640) {
+        setIsMenuOpen(false);
+      }
+
+      if (education.classList.contains("translate-y-full")) {
+        document.documentElement.style.overflowY = "auto";
+        document.body.style.overflowY = "auto";
+      } else {
+        document.documentElement.style.overflowY = "hidden";
+        document.body.style.overflowY = "hidden";
+      }
+    }
+  };
 
   return (
     <nav
@@ -134,6 +165,30 @@ export default function NavBar() {
             </a>
           </li>
           <li>
+            <a
+              className="hover:bg-base-700 outline-0"
+              onClick={toggleEducationVisibility}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="lucide lucide-graduation-cap-icon lucide-graduation-cap"
+              >
+                <path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z" />
+                <path d="M22 10v6" />
+                <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5" />
+              </svg>
+              Education
+            </a>
+          </li>
+          <li>
             <a className="hover:bg-base-700 outline-0">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -154,26 +209,6 @@ export default function NavBar() {
               </svg>
               Resume
               <span className="badge badge-xs badge-primary">PDF</span>
-            </a>
-          </li>
-          <li>
-            <a className="hover:bg-base-700 outline-0">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="lucide lucide-user"
-              >
-                <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
-                <circle cx="12" cy="7" r="4" />
-              </svg>
-              Contact
             </a>
           </li>
         </ul>

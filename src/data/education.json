@@ -1,0 +1,24 @@
+[
+    {
+      "year": "2023",
+      "month": "October",
+      "education": "Bachelor's Degree (2023 - Present)",
+      "institute": "Universiti Sains Malaysia, Penang.",
+      "description": "Major in Computing Intelligence, minor in Mathematics."
+    },
+    {
+      "year": "2021",
+      "month": "July",
+      "education": "Pre-university [STPM] (2021 - 2023)",
+      "institute": "SMK Batu Lintang, Sarawak.",
+      "description": "Science stream"
+    },
+    {
+      "year": "2016",
+      "month": "January",
+      "education": "Secondary Education (2016 - 2021)",
+      "institute": "SMK Batu Lintang, Sarawak.",
+      "description": "Science stream"
+    }
+]
+  
